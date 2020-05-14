@@ -7,16 +7,10 @@ This is just a simple RoR (Ruby on rails project) (no css) to manage a CRUD of a
 You just have to run :
 - Start with migrations on all dbs environment
 ```shell
-rails db:migrate RAILS_ENV=development
-
-rails db:migrate RAILS_ENV=test
-
-rails db:migrate RAILS_ENV=production
-```
-
-- Run the bundler:
-```shell
 bundle install
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rails s
 ```
 
 ## To Start it
